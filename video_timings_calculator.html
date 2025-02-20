@@ -293,9 +293,9 @@
                 INTERLACED  = interlaced;
 
                 dmt_timings.forEach(function(dmt_timing, index){
-                    if (   dmt_timing['h_active'] == horiz_pixels 
-                        && dmt_timing['v_active'] == vert_pixels 
-                        && dmt_timing['v_freq'].toFixed()   == refresh_rate.toFixed() 
+                    if (   dmt_timing['h_active'] == horiz_pixels
+                        && dmt_timing['v_active'] == vert_pixels
+                        && dmt_timing['v_freq'].toFixed()   == refresh_rate.toFixed()
                         && dmt_timing['interlaced'] == interlaced
                     ){
                         TOTAL_ACTIVE_PIXELS     = horiz_pixels;
@@ -339,8 +339,8 @@
                 INTERLACED  = interlaced;
 
                 vic_timings.forEach(function(vic_timing, index){
-                    if (   vic_timing['h_active'] == horiz_pixels 
-                        && vic_timing['v_active'] == vert_pixels 
+                    if (   vic_timing['h_active'] == horiz_pixels
+                        && vic_timing['v_active'] == vert_pixels
                         && (vic_timing['v_freq']).toFixed()   == refresh_rate.toFixed()
                         && ((interlaced && vic_timing['scan'] == "Int") || (!interlaced && vic_timing['scan'] == "Prog"))
                     ){
@@ -375,7 +375,7 @@
 
             function modeline()
             {
-                str = 'Modeline \"' 
+                str = 'Modeline \"'
                             + TOTAL_ACTIVE_PIXELS + 'x'
                             + V_LINES_RND + '_'
                             + vfreq_round100;
@@ -408,7 +408,7 @@
         </script>
         <h1>Video Timings Calculator</h1>
 
-        For more information, see <a href="/2019/08/03/Video-Timings-Calculator.html">this blog post</a>.
+        For more information, see <a href="/2025/02/20/Video-Timings-Calculator.html">this blog post</a>.
 
         <h2>Input Parameters</h2>
             <form id="parameters">
@@ -1132,19 +1132,19 @@
 
             <ul>
                 <li>When looking up a DMT or CEA-861 resolution for a particular refresh rate, the tool
-                    rounds the specified refresh rate to the closest integer and then matches against rounded 
+                    rounds the specified refresh rate to the closest integer and then matches against rounded
                     DMT and CEA refresh rates. For example, if you specify a refresh rate of 60.1Hz, the tool will show DMT and CEA refresh
                     rates of 59.94Hz.</li>
-                <li>DP Type-C Alt Mode is for USB Type-C connections using VESA DisplayPort Alternative Mode which 
-                    provides two DisplayPort lanes (pin assignments B, D, and F).  For connections providing four 
+                <li>DP Type-C Alt Mode is for USB Type-C connections using VESA DisplayPort Alternative Mode which
+                    provides two DisplayPort lanes (pin assignments B, D, and F).  For connections providing four
                     DisplayPort lanes (pin assignments A, C, and E) use the primary DisplayPort rows in the table.</li>
-                <li>Thunderbolt 3 has Max BW of 40,000 Mbit/s and Thunderbolt 2 has Max BW of 20,000 MBit/s, however 
-                    a single display cannot exceed the bandwidth listed above for DisplayPort. Known implementations 
-                    support either one or two DisplayPort displays. Intel Thunderbolt 2 controllers (code name "Falcon 
-                    Ridge") and the first Intel Thunderbolt 3 controller (code name "Alpine Ridge") only support 
+                <li>Thunderbolt 3 has Max BW of 40,000 Mbit/s and Thunderbolt 2 has Max BW of 20,000 MBit/s, however
+                    a single display cannot exceed the bandwidth listed above for DisplayPort. Known implementations
+                    support either one or two DisplayPort displays. Intel Thunderbolt 2 controllers (code name "Falcon
+                    Ridge") and the first Intel Thunderbolt 3 controller (code name "Alpine Ridge") only support
                     DisplayPort HBR2, while newer Intel controllers support DisplayPort HBR3.</li>
                 <li>There are some CEA VIC numbers with multiple timings that differ slightly in their Vtotal, and
-                    thus in their refresh rates. For example, VIC timings 23 and 24 have a resolution of 
+                    thus in their refresh rates. For example, VIC timings 23 and 24 have a resolution of
                     1440x288 can have a refresh rate of 50.080Hz, 49.920Hz, and 49.761Hz. When you search for one of
                     those exotic timings, the tool will choose one of the options, but not the other. The exact
                     behavior is undefined.</li>
@@ -1230,13 +1230,13 @@
                     };
 
                     var transport_list = [
-                        "dp_ubr20", "dp_ubr13", "dp_ubr10", 
-                        "dp_hbr3", "dp_hbr2", "dp_hbr", "dp_rbr", 
-                        "dpam_2", "dpam_hbr3", "dpam_hbr2", "dpam_hbr", "dpam_rbr", 
-                        "dvi_dl", "dvi_d", 
-                        "hdmi_2_0", "hdmi_1_3", "hdmi_1_0", 
-                        "hdmi_2_1_12g", "hdmi_2_1_10g", "hdmi_2_1_8g", "hdmi_2_1_6g", "hdmi_2_1_6g_3l", "hdmi_2_1_3g_3l", 
-                        "sdi_sd", "sdi_hd", "sdi_3g", "sdi_6g", "sdi_12g", 
+                        "dp_ubr20", "dp_ubr13", "dp_ubr10",
+                        "dp_hbr3", "dp_hbr2", "dp_hbr", "dp_rbr",
+                        "dpam_2", "dpam_hbr3", "dpam_hbr2", "dpam_hbr", "dpam_rbr",
+                        "dvi_dl", "dvi_d",
+                        "hdmi_2_0", "hdmi_1_3", "hdmi_1_0",
+                        "hdmi_2_1_12g", "hdmi_2_1_10g", "hdmi_2_1_8g", "hdmi_2_1_6g", "hdmi_2_1_6g_3l", "hdmi_2_1_3g_3l",
+                        "sdi_sd", "sdi_hd", "sdi_3g", "sdi_6g", "sdi_12g",
                         "rfc4175_eth100m", "rfc4175_eth1g", "rfc4175_eth10g" ];
 
                     standards.forEach(function(standard, index){
@@ -1272,11 +1272,11 @@
                             hactive         = TOTAL_ACTIVE_PIXELS;
                             hblank          = H_BLANK;
                             htotal          = TOTAL_PIXELS;
-    
+
                             vactive         = V_LINES_RND;
                             vblank          = V_BLANK;
                             vtotal          = TOTAL_V_LINES;
-    
+
                             pclock          = ACT_PIXEL_FREQ * 1000000;
                         }
                         else if (standard == "cea"){
@@ -1285,11 +1285,11 @@
                             hactive         = TOTAL_ACTIVE_PIXELS;
                             hblank          = H_BLANK;
                             htotal          = TOTAL_PIXELS;
-    
+
                             vactive         = V_LINES_RND;
                             vblank          = V_BLANK;
                             vtotal          = TOTAL_V_LINES;
-    
+
                             pclock          = ACT_PIXEL_FREQ * 1000000;
                         }
                         else {
@@ -1357,9 +1357,9 @@
 
                         if (result){
                             $(prefix + "-aspect_ratio").text(ASPECT_RATIO);
-    
+
                             $(prefix + "-pclock").text(Math.round(pclock/1000)/1000);
-    
+
                             $(prefix + "-htotal").text(htotal);
                             $(prefix + "-hpixels").text(hactive);
                             $(prefix + "-hblank").text(hblank);
@@ -1369,7 +1369,7 @@
                             $(prefix + "-hpol").text(H_POL);
                             $(prefix + "-hfreq").text(Math.round(hfreq)/1000);
                             $(prefix + "-hperiod").text(Math.round(hperiod*1000000000)/1000);
-    
+
                             $(prefix + "-vtotal").text(vtotal);
                             $(prefix + "-vpixels").text(vactive);
                             $(prefix + "-vblank").text(vblank);
@@ -1380,7 +1380,7 @@
                             $(prefix + "-vpol").text(V_POL);
                             $(prefix + "-vfreq").text(Math.round(vfreq*1000)/1000);
                             $(prefix + "-vperiod").text(Math.round(vperiod*1000000)/1000);
-    
+
                             $(prefix + "-peak_bw").text(Math.round(peak_bw/1000000));
                             $(prefix + "-line_bw").text(Math.round(line_bw/1000000));
                             $(prefix + "-active_bw").text(Math.round(active_bw/1000000));
@@ -1400,9 +1400,9 @@
                         }
                         else{
                             $(prefix + "-aspect_ratio").text("");
-    
+
                             $(prefix + "-pclock").text("");
-    
+
                             $(prefix + "-htotal").text("");
                             $(prefix + "-hpixels").text("");
                             $(prefix + "-hblank").text("");
@@ -1412,7 +1412,7 @@
                             $(prefix + "-hpol").text("");
                             $(prefix + "-hfreq").text("");
                             $(prefix + "-hperiod").text("");
-    
+
                             $(prefix + "-vtotal").text("");
                             $(prefix + "-vpixels").text("");
                             $(prefix + "-vblank").text("");
@@ -1423,7 +1423,7 @@
                             $(prefix + "-vpol").text("");
                             $(prefix + "-vfreq").text("");
                             $(prefix + "-vperiod").text("");
-    
+
                             $(prefix + "-peak_bw").text("");
                             $(prefix + "-line_bw").text("");
                             $(prefix + "-active_bw").text("");

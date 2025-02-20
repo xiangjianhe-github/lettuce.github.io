@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Video Timings Calculator
-date:   2019-08-03 00:00:00 -1000
+date:   20125-02-20 00:00:00 -1000
 categories:
 ---
 
-A very small of my day job consists of checking if the hardware on which I work will support certain 
+A very small of my day job consists of checking if the hardware on which I work will support certain
 video modes: "Hey Tom, has your widget the necessary bandwidth to deal with 4K/100Hz?".
 
 That's the moment where I normally bring up a spreadsheet for some back-of-the-envelope math.
@@ -20,7 +20,7 @@ more features added as I need them. Maybe you find it useful.
 
 So I present the [Video Timings Calculator]({{ "./video_timings_calculator" | absolute_url }})!
 
-Operation is simple: 
+Operation is simple:
 
 * Select the resolution and refresh rate that you're interested in
 * Manually adjust whatever parameter that needs to be changed
@@ -39,7 +39,7 @@ Notes:
   is consumed. When it exceeds 100%, the timing can't be transferred over that particular protocol.
 * The custom timings ignore interlaced or margins. That's because I was lazy and nobody
   cares about these things anymore.
-* The RFC4175 assumes UDP over IP over Ethernet with an Ethernet MTU of 1500. I think I got the 
+* The RFC4175 assumes UDP over IP over Ethernet with an Ethernet MTU of 1500. I think I got the
   calculation mostly right, except for rounding error here and there depending on color format.
 * There may be other limitations that prevent a video timing to be transmitted over a particular
   protocol. For example, GPUs may have peak pixel clock restrictions that are lower than what
