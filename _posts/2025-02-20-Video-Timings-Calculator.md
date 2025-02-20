@@ -18,7 +18,7 @@ Spreadsheet are really great for this kind of stuff, but they become cumbersome 
 grow larger. So I wrote some Javascript instead and it has taken a bit of life on its own, with
 more features added as I need them. Maybe you find it useful.
 
-So I present the [Video Timings Calculator]({{ "./video_timings_calculator" | absolute_url }})!
+So I present the [Video Timings Calculator](https://xiangjianhe-github.github.io/xiangjianhe.github.io/video_timings_calculator)!
 
 Operation is simple:
 
