@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Video Timings Calculator
-date:   2025-02-19 00:00:00 -1000
+date:   2025-02-20 00:00:00 -1000
 categories:
 ---
 
@@ -18,7 +18,7 @@ Spreadsheet are really great for this kind of stuff, but they become cumbersome 
 grow larger. So I wrote some Javascript instead and it has taken a bit of life on its own, with
 more features added as I need them. Maybe you find it useful.
 
-So I present the [Video Timings Calculator](https://xiangjianhe-github.github.io/xiangjianhe.github.io/video_timings_calculator)!
+So I present the [Video Timings Calculator]({{ "./video_timings_calculator" | absolute_url }})!
 
 Operation is simple:
 
